@@ -1,0 +1,9 @@
+<h1>Index#show</h1>
+<p>Find me in app/views/index/show.html.erb</p>
+
+<h2><%= @article.title %></h2>
+<p>Article content: <%= @article.content %></p>
+<p><%= link_to "back to list", "/articles" %></p>
+<p><%= link_to "Edit this article", edit_article_path %></p>
+<p><%= link_to "Delete this article", article_path(@article),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
